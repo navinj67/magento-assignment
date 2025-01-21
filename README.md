@@ -1,4 +1,4 @@
-# Playwright (TS binding) + Cucumber (BDD)
+# Magento Assignment for Teknotrait By Navin
 
 ## Features
 
@@ -17,7 +17,7 @@ test-results\cucumber-report.html
 
 ## Reports
 1. Default Cucumber report
-2. [Logs](https://www.npmjs.com/package/winston)
+2. Logs (https://www.npmjs.com/package/winston)
 3. Screenshots of failure
 4. Test videos of failure
 5. Trace of failure
@@ -39,7 +39,7 @@ test-results\cucumber-report.html
 ```
 7. Use tags to run a specific or collection of specs
 ```
-npm run test --TAGS="@cart or @add"
+npm run test --TAGS="@cart or @login"
 ```
 
 ### Folder structure
