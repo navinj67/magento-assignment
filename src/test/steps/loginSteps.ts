@@ -45,5 +45,5 @@ Given('User enters the username {string}', async function (username) {
     await loggedInText.waitFor({ state: 'visible', timeout: 60000 });
     const textpass = await loggedInText.textContent();
     console.log(`Logged in text: ${textpass}`);
-    expect(textpass).not.toBeNull(); // Assert that logged-in text is not null
+    expect(textpass).not.toBeNull(); // check Assert that logged-in text is not null 
   });

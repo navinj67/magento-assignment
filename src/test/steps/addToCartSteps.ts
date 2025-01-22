@@ -43,6 +43,16 @@ Then('The cart badge should get updated', async function () {
   }
   await fixture.page.waitForTimeout(10000);
   // Verify that the cart badge updates after adding the item to the cart
-  const badgeCount = await fixture.page.locator("//span[contains(@class,'counter qty')]//span[1]").textContent();
-  expect(Number(badgeCount?.trim())).toBeGreaterThan(0); // Ensure the badge count is a valid number greater than 0
+  const badgeCount = await fixture.page.locator("//span[contains(@class,'counter-number')]").textContent();
+
+// Convert the badge count to a number and check if it's greater than zero
+if (badgeCount !== null && Number(badgeCount.trim()) > 0) {
+  console.log("Test Passed: Badge count is greater than zero.");
+} else {
+  console.error("Test Failed: Badge count is zero or not valid.");
+}
+
+// Optional: Use an assertion framework for automated pass/fail
+expect(Number(badgeCount?.trim())).toBeGreaterThan(0);
+
 });
